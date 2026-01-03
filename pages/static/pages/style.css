@@ -1,0 +1,184 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+/* 1.  ШАПКА (HEADER) */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 200px;
+  height: 80px;
+}
+
+
+/* --- 2. ГЛАВНЫЙ БАННЕР (HERO) --- */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #ff6600;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #e65c00;
+  /* Темнее при наведении */
+}
+
+/* --- 4. СЕКЦИЯ КОНТАКТОВ --- */
+.contact {
+    background-color: #003366; /* Темно-синий фон */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 400px; /* Ограничиваем ширину, чтобы не растягивалась слишком сильно */
+    margin: 0 auto;   /* Центрируем форму */
+    display: flex;
+    flex-direction: column; /* Элементы друг под другом */
+    gap: 15px; /* Расстояние между полями */
+}
+
+/* Стили для полей ввода */
+input, textarea {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-family: inherit; /* Чтобы шрифт был как везде */
+}
+
+/* Кнопка в форме */
+.contact button {
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    background-color: #ff6600;
+}
+
+.contact button:hover {
+    background-color: #e65c00;
+}
+
+/* Обновляем стиль самой карточки */
+.card {
+    background: #fff;
+    border: 1px solid #eee; /* Очень легкая рамка */
+    border-radius: 15px;    /* Скругляем углы самой карточки */
+    padding: 30px 20px;     /* Больше воздуха внутри */
+    width: 280px;           /* Фиксированная ширина */
+    text-align: center;     /* Все по центру */
+    display: flex;          
+    flex-direction: column; /* Элементы друг под другом */
+    align-items: center;    /* Центрируем по горизонтали */
+    transition: all 0.3s ease; /* Плавная анимация при наведении */
+}
+
+/* Эффект поднятия при наведении мышки */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Стили для картинки */
+.card-img {
+    width: 170px;           /* Размер картинки */
+    height: 170px;
+    object-fit: contain;      /* Чтобы фото не сплющилось, а обрезалось */
+    border-radius: 50%;     /* ПРЕВРАЩАЕМ В КРУГ */
+    margin-bottom: 20px;
+    background-color: #f0f0f0; /* Серый фон, если картинка прозрачная */
+}
+
+/* Стили для кнопки-ссылки */
+.card-btn {
+    display: inline-block;
+    margin-top: auto;       /* Прижимаем кнопку к низу, если текста мало */
+    padding: 10px 25px;
+    border: 1px solid #003366; /* Синяя рамка как у логотипа */
+    border-radius: 50px;       /* Овальная форма (Pill shape) */
+    text-decoration: none;     /* Убираем подчеркивание */
+    color: #003366;            /* Цвет текста */
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.card-btn:hover {
+    background-color: #003366; /* При наведении заливаем синим */
+    color: white;              /* А текст становится белым */
+}
+
+.btn-orange {
+  color: #ff6600;
+  border-color: #ff6600;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.btn-orange:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+.service-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+/* --- ЗДЕСЬ БУДУТ ВАШИ МЕДИА-ЗАПРОСЫ --- */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+   .hero h1 {
+    font-size: 28px;
+  }
+  .card {
+    width: 100%;
+  }
+}
+/* --- 5. ПОДВАЛ (FOOTER) --- */
+footer {
+    background-color: #333; /* Темно-серый, почти черный */
+    color: #ccc;            /* Светло-серый текст */
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: auto;       /* Хорошая привычка, чтобы футер не прилипал к верху, если контента мало */
+}

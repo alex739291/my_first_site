@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riparazioni Elettrodomestici</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'pages/style.css' %}">
+</head>
+
+<body>
+
+
+    <header>
+        <div class="logo"><img src="{% static 'pages/images/logo.png' %}" alt="Logo"></div>
+        <a href="tel:+39123456789" class="btn-orange card-btn">📞 02 1234 5678</a>
+    </header>
+
+    <section class="hero">
+        <h1>Elettrodomestici guasti? Li ripariamo noi!</h1>
+        <p>Intervento in giornata. Garanzia di qualità.</p>
+        <a href="#" class="btn">Richiedi Preventivo</a>
+    </section>
+
+    <section class="services">
+        <h2>I Nostri Servizi</h2>
+        <div class="service-grid">
+            <div class="card">
+                <img src="{% static 'pages/images/frigo.png' %}" alt="Frigorifero"
+                    class="card-img">
+                <h3>Riparazione Frigoriferi</h3>
+                <a href="#" class="card-btn">Vedi Dettagli</a>
+            </div>
+
+            <div class="card">
+                <img src="{% static 'pages/images/lavatrice.jpg' %}" alt="Lavatrice"
+                    class="card-img">
+                <h3>Riparazione Lavatrici Asciiugatrici</h3>
+                <a href="#" class="card-btn">Vedi Dettagli</a>
+            </div>
+
+            <div class="card">
+                <img src="{% static 'pages/images/forno.jpg' %}" alt="Forno"
+                    class="card-img">
+                <h3>Forni e Piani Cottura</h3>
+                <a href="#" class="card-btn">Vedi Dettagli</a>
+            </div>
+
+            <div class="card">
+                <img src="{% static 'pages/images/lavastoviglia.jpg' %}" alt="Lavastoviglie"
+                    class="card-img">
+                <h3>Riparazione Lavastoviglie</h3>
+                <a href="#" class="card-btn">Vedi Dettagli</a>
+            </div>
+        </div>
+
+
+
+    </section>
+    <section class="contact">
+        <h2>Richiedi un Preventivo Gratuito</h2>
+        <p>Compila il modulo e ti richiameremo entro 15 minuti.</p>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Il tuo nome" required>
+
+            <input type="tel" placeholder="Il tuo telefono" required>
+
+            <textarea placeholder="Descrivi il problema (es. lavatrice non scarica)" rows="4"></textarea>
+
+            <button type="submit" class="btn">Invia Richiesta</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Riparazione Elettrodomestici. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+
+</html>
